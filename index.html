@@ -1,0 +1,73 @@
+<html>
+
+    <head>
+        <title> My Paint </title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" >
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" >
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    
+
+
+    <body>
+        <div class="container">
+            <h1 style="text-align:center"> ~ My Paint ~</h1>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="well sidebar zonemenu"> menu
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="well well-lg zonetravail"> <h4 style="text-align:center"> Zone de Travail </h4>
+                        <div id="sketch" class="well feuille">
+                            <canvas id="myCanvas" width="660" height="400" style="border:1px solid #000000;"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-2">
+                    <div class="well sidebar zoneoutil"> <h4> zone outil </h4>
+                        <br />
+                            <p> Couleurs </p>
+							<ul id="couleurs">
+								<li><a href="#" data-couleur="#000000" class="actif">Noir</a></li>
+								<li><a href="#" data-couleur="#ffffff">Blanc</a></li>
+								<li><a href="#" data-couleur="#ff0000">Rouge</a></li>
+								<li><a href="#" data-couleur="brown">Marron</a></li>
+								<li><a href="#" data-couleur="orange">Orange</a></li>
+								<li><a href="#" data-couleur="yellow">Jaune</a></li>
+								<li><a href="#" data-couleur="green">Vert</a></li>
+								<li><a href="#" data-couleur="cyan">Cyan</a></li>
+								<li><a href="#" data-couleur="blue">Bleu</a></li>
+								<li><a href="#" data-couleur="indigo">Indigo</a></li>
+								<li><a href="#" data-couleur="Violet">Violet</a></li>
+								<li><a href="#" data-couleur="pink">Rose</a></li>
+							</ul>
+							<form id="largeurs_pinceau">
+								<label for="largeur_pinceau">Largeur du pinceau :</label>
+								<input id="largeur_pinceau" type="range" min="2" max="15" value="3" />
+								<output id="output">3 pixels</output>
+								
+								<br/>
+								
+								<input type="reset" id="reset" value="R&eacute;initialiser" />
+								<input type="button" id="save" value="Save mon image" />
+							</form>
+							<ul id="forme">
+								<li> <label> Crayon </label> <a href="#" data-forme="crayon"> <span class="crayon icon glyphicon glyphicon-pencil"> </span> </a> </li>
+								<li> <label> Ligne </label> <a href="#" data-forme="ligne"> <span class="ligne icon glyphicon glyphicon-minus">  </span>  </a> </li>
+								<li> <label> Rectangle </label> <a href="#" data-forme="rect"> <div class="rectangle"> </div> </a> </li>
+								<li> <label> Cercle </label> <a href="#" data-forme="cercle">  <div class="cercle"> </div> </a> </li>
+								<li> <label> Rectangle "Filled" </label> <a href="#" data-forme="fillRect"> <div class="filledrect"> </div> </a> </li>
+								<br />
+								<li> <label> Annuler </label> <a id="annuler" href="#"> <img class="cancel" src="img/annuler.png" alt="annuler"/> </a> </li>
+							</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/script.js"> </script>
+    </body>
+</html>
